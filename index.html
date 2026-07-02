@@ -4,138 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthieu Seers - Technicien en soutien informatique</title>
-    <meta name="description" content="Curriculum vitae de Matthieu Seers. Technicien en soutien informatique, virtualisation, réseaux et cybersécurité.">
+    <meta name="description" content="Portfolio de Matthieu Seers. Technicien en soutien informatique, virtualisation, réseaux et cybersécurité.">
+    <!-- Intégration des icônes FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lien vers ton nouveau fichier CSS -->
     <link rel="stylesheet" href="style.css">
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 850px; margin: 0 auto; padding: 20px; color: #333; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-bottom: 5px; }
-        h2 { color: #2980b9; margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        h3 { color: #34495e; margin-top: 20px; margin-bottom: 10px; }
-        a { color: #3498db; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
-        .contact-info { background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #3498db; }
-        .contact-info p { margin: 5px 0; }
-        .btn-download { display: inline-block; background-color: #2c3e50; color: white; padding: 10px 15px; border-radius: 5px; margin-top: 15px; }
-        .btn-download:hover { background-color: #34495e; color: white; text-decoration: none; }
-        ul { margin-top: 5px; margin-bottom: 15px; }
-        li { margin-bottom: 8px; }
-        .objectif { font-weight: bold; color: #c0392b; margin-top: 15px; }
-        
-        /* Styles pour la lettre de recommandation */
-        blockquote {
-            border-left: 5px solid #3498db;
-            background-color: #f4f6f7;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            font-size: 0.95em;
-        }
-        blockquote p { margin-bottom: 15px; }
-        .signature { margin-top: 20px; font-style: italic; }
-        .signature strong { font-style: normal; color: #2c3e50; }
-    </style>
 </head>
 <body>
 
-    <header>
-        <h1>MATTHIEU SEERS</h1>
-        <h2>Technicien en Soutien Informatique</h2>
-        
-        <div class="contact-info">
-            <p>📍 Sorel-Tracy (Québec) J3P 7Z2</p>
-            <p>📞 514 660-7638 | 📧 <a href="mailto:supaseers@hotmail.com">supaseers@hotmail.com</a></p>
-            <p class="objectif">🎯 Objectif : Stage de fin d'études (Mi-septembre à début décembre 2026)</p>
-            <a href="CV_Matthieu_Seers.pdf" download class="btn-download">📥 Télécharger mon CV (Format PDF)</a>
-        </div>
-    </header>
+    <!-- Barre de navigation -->
+    <nav>
+        <a href="#profil">Profil</a>
+        <a href="#experience">Projets & Expérience</a>
+        <a href="#formation">Formation</a>
+        <a href="#competences">Compétences</a>
+        <a href="#references">Références</a>
+        <button id="btn-dark-mode" title="Activer/Désactiver le mode sombre"><i class="fas fa-moon"></i></button>
+    </nav>
 
-    <section id="profil">
-        <h2>PROFIL PROFESSIONNEL</h2>
-        <p>Technicien en informatique rigoureux, orienté vers la résolution de problèmes complexes (troubleshooting) et le service aux utilisateurs. Fort d'une solide expertise en gestion de conseils d'administration et traitement archivistique, je combine de fortes compétences relationnelles à un profil technique polyvalent (réseaux, virtualisation, systèmes). Idéalement établi dans la région, je vise une intégration durable et un engagement à long terme au sein d'un environnement industriel ou d'entreprise à la suite de mon stage de fin d'études.</p>
-    </section>
-
-    <section id="experience">
-        <h2>EXPÉRIENCE PROFESSIONNELLE & PROJETS TI</h2>
-        
-        <h3>Administrateur TI et Gestionnaire Web | Société Belge de Bienfaisance (SBB)</h3>
-        <ul>
-            <li><strong>Gestion CRM et Web :</strong> Administration complète du système CRM et maintenance évolutive du site web WordPress.</li>
-            <li><strong>Infrastructure et Cloud :</strong> Déploiement et gestion du stockage infonuagique via kDrive. Migration des courriels et application de politiques de sécurité des mots de passe.</li>
-            <li><strong>Gouvernance :</strong> Participation active à la gouvernance globale en tant que membre du conseil d'administration.</li>
-        </ul>
-
-        <h3>Cyber Homelab & Administration Système | Projets Personnels (En continu)</h3>
-        <ul>
-            <li>Déploiement et administration d'un environnement de laboratoire complet (Cluster Proxmox VE, stockage distribué Ceph).</li>
-            <li>Configuration d'architectures réseau avancées et adressage IP (Plage 10.0.0.0/8).</li>
-        </ul>
-    </section>
-
-    <section id="formation">
-        <h2>FORMATION EN INFORMATIQUE</h2>
-        
-        <ul>
-            <li><strong>AEC en Cybersécurité - Sécurisation d'un parc informatique</strong><br>
-            Cégep de Sainte-Foy - Début prévu : Septembre 2026<br>
-            <em>Formation continue entièrement en ligne (mardis/jeudis soirs et un samedi par mois).</em></li>
+    <div class="container">
+        <header>
+            <!-- Remplace "profil.jpg" par le nom exact de ta photo plus tard -->
+            <img src="profil.jpg" alt="Matthieu Seers" class="profile-pic" onerror="this.style.display='none'">
+            <h1>MATTHIEU SEERS</h1>
+            <h2>Technicien en Soutien Informatique & Infrastructures</h2>
             
-            <li><strong>DEP en Soutien informatique (Diplôme d'études professionnelles)</strong><br>
-            CFP des Carrefours, Verdun (QC) - Obtention prévue : Décembre 2026<br>
-            <em>Infrastructures et systèmes :</em> Réseaux locaux, administration de serveurs et gestion des accès (Active Directory), virtualisation (Proxmox, VMware), commandes systèmes et scripts (Python, PowerShell).<br>
-            <em>Soutien et exploitation :</em> Rétablissement de postes, Microsoft Intune, déploiement de logiciels, téléphonie IP.</li>
-        </ul>
-
-        <h3>Certifications et Formations Complémentaires</h3>
-        <ul>
-            <li>Certification Python - W3Schools</li>
-            <li>Formation IT Essentials 7 - Cisco</li>
-        </ul>
-    </section>
-
-    <section id="competences">
-        <h2>COMPÉTENCES CLÉS & LOGICIELS ASSOCIÉS</h2>
-        
-        <h3>Soutien Technique, Matériel et Périphériques</h3>
-        <ul>
-            <li>Diagnostic de pannes matérielles/logicielles et remplacement de composants. Configuration de postes et appareils mobiles.</li>
-            <li>Microsoft Intune (MDM), Windows 10/11, macOS, Linux, ServiceNow, Jira Service Desk, GLPI, MECM/SCCM.</li>
-        </ul>
-
-        <h3>Administration Réseaux, Serveurs et Gestion des Accès</h3>
-        <ul>
-            <li>Gestion des accès, attribution des permissions, routage de base, adressage IP et surveillance des infrastructures (LAN).</li>
-            <li>Active Directory (AD), Azure AD / Entra ID, Windows Server, Cisco Packet Tracer, Wireshark, DHCP/DNS.</li>
-        </ul>
-
-        <h3>Virtualisation, Ligne de Commande et Automatisation</h3>
-        <ul>
-            <li>Déploiement, configuration et maintenance de machines virtuelles. Création de scripts d'automatisation.</li>
-            <li>Proxmox VE, VMware Workstation, VirtualBox, Hyper-V, Bash, PowerShell, Python.</li>
-        </ul>
-    </section>
-
-    <section id="references">
-        <h2>RÉFÉRENCES</h2>
-        
-        <blockquote>
-            <p><strong>Objet : Lettre de recommandation pour Matthieu SEERS</strong></p>
-            <p>À qui de droit,</p>
-            <p>C’est avec un grand enthousiasme que je rédige cette lettre pour recommander vivement Matthieu Seers pour un poste ou un stage dans le domaine du soutien informatique et des technologies de l'information. En tant que présidente par intérim de la Société Belge de Bienfaisance (SBB), j'ai le privilège de collaborer avec Matthieu et de constater quotidiennement l'impact majeur de son travail sur la modernisation de notre organisation.</p>
-            <p>Matthieu agit à titre de Responsable de nos technologies de l'information. Dans le cadre de ses fonctions, il a pris en charge avec brio la gestion complète de notre infrastructure web. Il a notamment orchestré la configuration technique de notre hébergement et de nos noms de domaine, prouvant sa capacité à naviguer dans des environnements d'administration complexes (comme les plateformes de type Infomaniak).</p>
-            <p>Parmi ses accomplissements récents, Matthieu a procédé à l'intégration avancée de nos plateformes avec les outils Google (Search Console). Il a démontré une excellente maîtrise technique en intervenant directement au niveau de nos zones DNS pour configurer des enregistrements de sécurité, et a géré l'indexation de nos pages web pour optimiser notre visibilité. De plus, il administre notre site sous WordPress avec une grande rigueur, gérant la refonte visuelle, la restructuration des blocs et l'uniformisation de l'interface utilisateur.</p>
-            <p>Au-delà de ses compétences purement techniques, Matthieu est un collaborateur exceptionnel. Face à un obstacle informatique, il fait preuve d'une persévérance remarquable, d'un grand sens de la débrouillardise et d'une autonomie qui lui permet d'aller au bout de chaque problème pour trouver la solution adéquate. Sa capacité à comprendre rapidement de nouvelles interfaces et à appliquer des correctifs précis est un atout inestimable.</p>
-            <p>Je suis convaincue que la passion de Matthieu pour l'informatique, sa logique de résolution de problèmes et son dévouement feront de lui un technicien en informatique de premier plan au sein de votre entreprise. Je vous le recommande sans la moindre réserve.</p>
-            <p>Je demeure à votre entière disposition pour tout renseignement complémentaire.<br>
-            Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées.</p>
-            <div class="signature">
-                <strong>Ada RIVERA TERAN</strong><br>
-                Présidente par intérim<br>
-                Société Belge de Bienfaisance
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Sorel-Tracy (Québec) J3P 7Z2</p>
+                <p><i class="fas fa-phone"></i> 514 660-7638 | <i class="fas fa-envelope"></i> <a href="mailto:supaseers@hotmail.com">supaseers@hotmail.com</a></p>
+                <p style="font-weight: bold; color: #c0392b; margin-top: 10px;"><i class="fas fa-crosshairs"></i> Objectif : Stage de fin d'études (Mi-septembre à début décembre 2026)</p>
+                
+                <a href="CV_Matthieu_Seers.pdf" download class="btn-download"><i class="fas fa-file-pdf"></i> Télécharger mon CV (PDF)</a>
             </div>
-        </blockquote>
-    </section>
+        </header>
 
+        <section id="profil">
+            <h2><i class="fas fa-user-tie"></i> PROFIL PROFESSIONNEL</h2>
+            <div class="industrial-pitch">
+                <h3>Une expertise hybride pour l'industrie (Route 132)</h3>
+                <p>À la recherche d'un stage de fin d'études stimulant au sein d'un environnement industriel de grande envergure (ArcelorMittal, Rio Tinto, Olymel, Soprema, Hydro-Québec). Mon profil est unique : je combine un solide diplôme précédent en <strong>électromécanique de systèmes automatisés</strong> avec une expertise pointue en <strong>soutien informatique, réseautique et virtualisation</strong>.</p>
+                <p>Cette double compétence me permet de comprendre intimement les réalités des planchers de production, des automates et des infrastructures TI critiques qui les soutiennent, assurant une résolution de problèmes (troubleshooting) rapide et parfaitement adaptée aux milieux industriels lourds.</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2><i class="fas fa-network-wired"></i> EXPÉRIENCE PROFESSIONNELLE & PROJETS TI</h2>
+            
+            <h3><i class="fas fa-server"></i> Cyber Homelab & Administration Système (En continu)</h3>
+            <ul>
+                <li>Déploiement et administration d'un environnement de laboratoire complet pour simuler des infrastructures d'entreprise.</li>
+                <li><strong>Virtualisation & Stockage :</strong> Gestion d'un cluster Proxmox VE (serveur Dell PowerEdge R620 et nœuds Lenovo Tiny) couplé à un stockage distribué Ceph.</li>
+                <li><strong>Réseautique avancée :</strong> Configuration d'architectures réseau segmentées avec gestion de l'adressage IP interne (Plage 10.0.0.0/8).</li>
+            </ul>
+            <!-- Emplacement pour ton schéma réseau -->
+            <img src="schema_reseau.jpg" alt="Topologie du laboratoire" class="schema-img" onerror="this.style.display='none'">
+
+            <h3><i class="fas fa-cloud"></i> Projet Aegis & Tradkoff (Collaboration)</h3>
+            <ul>
+                <li>Collaboration au développement et au déploiement de serveurs d'entreprise de type "Zero-Cloud" (Projet Aegis).</li>
+                <li>Participation à l'architecture de solutions technologiques garantissant la souveraineté des données et l'hébergement local de services critiques.</li>
+            </ul>
+
+            <h3><i class="fas fa-users-cog"></i> Administrateur TI et Gestionnaire Web | Société Belge de Bienfaisance (SBB)</h3>
+            <ul>
+                <li><strong>Gouvernance & Infrastructure :</strong> Membre du CA et responsable TI. Gestion de la migration de l'infrastructure web vers Infomaniak (transfert de domaine Gandi, certificats SSL, configuration des zones DNS).</li>
+                <li><strong>Web & Cloud :</strong> Administration du site WordPress (restructuration et uniformisation) et déploiement du stockage infonuagique kDrive.</li>
+                <li><strong>Sécurité :</strong> Application de politiques de sécurité des mots de passe et intégration Google Search Console.</li>
+            </ul>
+        </section>
+
+        <section id="formation">
+            <h2><i class="fas fa-graduation-cap"></i> FORMATION EN INFORMATIQUE</h2>
+            <ul>
+                <li><strong>AEC en Cybersécurité - Sécurisation d'un parc informatique</strong><br>
+                Cégep de Sainte-Foy - Début : Septembre 2026 (Formation continue)</li>
+                
+                <li><strong>DEP en Soutien informatique</strong><br>
+                CFP des Carrefours - Obtention prévue : Décembre 2026</li>
+            </ul>
+        </section>
+
+        <section id="competences">
+            <h2><i class="fas fa-tools"></i> COMPÉTENCES CLÉS & LOGICIELS</h2>
+            <ul>
+                <li><strong>Virtualisation & Automatisation :</strong> Proxmox VE, VMware Workstation, Hyper-V, Bash, PowerShell, Python.</li>
+                <li><strong>Réseaux & Sécurité :</strong> Active Directory (AD), Azure AD, DHCP/DNS, Wireshark, adressage IP, routage, Kali Linux, Parrot OS, TryHackMe (Red Teaming).</li>
+                <li><strong>Soutien & Matériel :</strong> Diagnostic matériel/logiciel, Microsoft Intune (MDM), Windows Server/10/11, macOS, Linux, GLPI, ServiceNow. Matériel open-source (Pine64).</li>
+            </ul>
+        </section>
+
+        <section id="references">
+            <h2><i class="fas fa-star"></i> RÉFÉRENCES</h2>
+            <blockquote>
+                <p><strong>Objet : Lettre de recommandation pour Matthieu SEERS</strong></p>
+                <p>C’est avec un grand enthousiasme que je rédige cette lettre pour recommander vivement Matthieu Seers pour un poste ou un stage dans le domaine du soutien informatique. [...] Matthieu a pris en charge avec brio la gestion complète de notre infrastructure web. Il a notamment orchestré la configuration technique de notre hébergement et de nos noms de domaine, prouvant sa capacité à naviguer dans des environnements d'administration complexes (comme les plateformes de type Infomaniak).</p>
+                <p>[...] Il a démontré une excellente maîtrise technique en intervenant directement au niveau de nos zones DNS pour configurer des enregistrements de sécurité. [...] Sa capacité à comprendre rapidement de nouvelles interfaces et à appliquer des correctifs précis est un atout inestimable.</p>
+                <div style="margin-top: 15px; font-style: italic;">
+                    <strong>Ada RIVERA TERAN</strong><br>
+                    Présidente par intérim - Société Belge de Bienfaisance
+                </div>
+            </blockquote>
+        </section>
+    </div>
+
+    <!-- Script pour faire fonctionner le bouton Mode Sombre -->
+    <script>
+        const btnDarkMode = document.getElementById('btn-dark-mode');
+        const body = document.body;
+        const icon = btnDarkMode.querySelector('i');
+
+        // Vérifier si un thème est déjà sauvegardé dans le navigateur
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        btnDarkMode.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    </script>
 </body>
 </html>
-
- 
