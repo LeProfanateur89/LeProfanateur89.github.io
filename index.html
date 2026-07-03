@@ -5,20 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthieu Seers - Technicien en soutien informatique</title>
     <meta name="description" content="Portfolio de Matthieu Seers. Technicien en soutien informatique, virtualisation, réseaux et cybersécurité.">
-    
-    <!-- BALISES OPEN GRAPH (Pour de beaux partages sur LinkedIn/Facebook/Discord) -->
-    <meta property="og:title" content="Matthieu Seers - Portfolio TI">
-    <meta property="og:description" content="Technicien en soutien informatique. Découvrez mon CV, mes projets et mes compétences en infrastructure et cybersécurité.">
-    <meta property="og:image" content="https://mseers.ca/profil.jpg">
-    <meta property="og:url" content="https://mseers.ca">
-    <meta property="og:type" content="website">
-    
-    <!-- FAVICON (La petite icône dans l'onglet du navigateur) -->
-    <link rel="icon" type="image/png" href="favicon.png">
-
     <!-- Intégration des icônes FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Lien vers ton fichier CSS -->
+    <!-- Lien vers ton nouveau fichier CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -34,7 +23,7 @@
     </nav>
 
     <div class="container">
-        <header class="fade-in">
+        <header>
             <!-- L'image de profil -->
             <img src="profil.jpg" alt="Matthieu Seers" class="profile-pic">
             
@@ -50,12 +39,12 @@
             </div>
         </header>
 
-        <section id="profil" class="fade-in">
+        <section id="profil">
             <h2><i class="fas fa-user-tie"></i> PROFIL PROFESSIONNEL</h2>
             <p>Technicien en informatique rigoureux, orienté vers la résolution de problèmes complexes (troubleshooting) et le service aux utilisateurs. Fort d'une solide expertise en gestion de conseils d'administration et traitement archivistique, je combine de fortes compétences relationnelles à un profil technique polyvalent (réseaux, virtualisation, systèmes). Idéalement établi dans la région, je vise une intégration durable et un engagement à long terme au sein d'un environnement industriel ou d'entreprise à la suite de mon stage de fin d'études.</p>
         </section>
 
-        <section id="experience" class="fade-in">
+        <section id="experience">
             <h2><i class="fas fa-network-wired"></i> EXPÉRIENCE PROFESSIONNELLE & PROJETS TI</h2>
             
             <h3><i class="fas fa-users-cog"></i> Administrateur TI et Gestionnaire Web | Société Belge de Bienfaisance (SBB)</h3>
@@ -72,7 +61,7 @@
             </ul>
         </section>
 
-        <section id="formation" class="fade-in">
+        <section id="formation">
             <h2><i class="fas fa-graduation-cap"></i> FORMATION EN INFORMATIQUE</h2>
             <ul>
                 <li><strong>AEC en Cybersécurité - Sécurisation d'un parc informatique</strong><br>
@@ -92,7 +81,7 @@
             </ul>
         </section>
 
-        <section id="competences" class="fade-in">
+        <section id="competences">
             <h2><i class="fas fa-tools"></i> COMPÉTENCES CLÉS & LOGICIELS ASSOCIÉS</h2>
             
             <h3>Soutien Technique, Matériel et Périphériques</h3>
@@ -114,7 +103,7 @@
             </ul>
         </section>
 
-        <section id="references" class="fade-in">
+        <section id="references">
             <h2><i class="fas fa-star"></i> RÉFÉRENCES</h2>
             
             <blockquote>
@@ -136,16 +125,13 @@
         </section>
     </div>
 
-    <!-- BOUTON RETOUR EN HAUT -->
-    <button id="btn-back-to-top" title="Retour en haut"><i class="fas fa-arrow-up"></i></button>
-
-    <!-- SCRIPTS (Mode sombre, Animations et Retour en haut) -->
+    <!-- Script pour faire fonctionner le bouton Mode Sombre -->
     <script>
-        /* 1. GESTION DU MODE SOMBRE */
         const btnDarkMode = document.getElementById('btn-dark-mode');
         const body = document.body;
         const icon = btnDarkMode.querySelector('i');
 
+        // Vérifier si un thème est déjà sauvegardé dans le navigateur
         if (localStorage.getItem('theme') === 'dark') {
             body.classList.add('dark-mode');
             icon.classList.replace('fa-moon', 'fa-sun');
@@ -160,36 +146,6 @@
                 localStorage.setItem('theme', 'light');
                 icon.classList.replace('fa-sun', 'fa-moon');
             }
-        });
-
-        /* 2. GESTION DES ANIMATIONS D'APPARITION (FADE-IN) */
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 }); // Se déclenche quand 10% de la section est visible
-        
-        document.querySelectorAll('.fade-in').forEach((section) => {
-            observer.observe(section);
-        });
-
-        /* 3. GESTION DU BOUTON "RETOUR EN HAUT" */
-        const btnBackToTop = document.getElementById('btn-back-to-top');
-
-        // Afficher le bouton quand on descend de 300px
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                btnBackToTop.style.display = 'block';
-            } else {
-                btnBackToTop.style.display = 'none';
-            }
-        });
-
-        // Remonter en haut au clic
-        btnBackToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
