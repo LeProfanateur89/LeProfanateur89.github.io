@@ -24,7 +24,8 @@
 
     <div class="container">
         <header>
-            <img src="profil.jpg" alt="Matthieu Seers" class="profile-pic" onerror="this.style.display='none'">
+            <!-- L'image s'affichera ici. Si elle est brisée, vérifie que l'extension est bien .jpg et non .jpeg -->
+            <img src="profil.jpg" alt="Matthieu Seers" class="profile-pic">
             <h1>MATTHIEU SEERS</h1>
             <h2>Technicien en Soutien Informatique & Infrastructures</h2>
             
@@ -39,11 +40,7 @@
 
         <section id="profil">
             <h2><i class="fas fa-user-tie"></i> PROFIL PROFESSIONNEL</h2>
-            <div class="industrial-pitch">
-                <h3>Une expertise hybride pour l'industrie (Route 132)</h3>
-                <p>À la recherche d'un stage de fin d'études stimulant au sein d'un environnement industriel de grande envergure (ArcelorMittal, Rio Tinto, Olymel, Soprema, Hydro-Québec). Mon profil est unique : je combine un solide diplôme précédent en <strong>électromécanique de systèmes automatisés</strong> avec une expertise pointue en <strong>soutien informatique, réseautique et virtualisation</strong>.</p>
-                <p>Cette double compétence me permet de comprendre intimement les réalités des planchers de production, des automates et des infrastructures TI critiques qui les soutiennent, assurant une résolution de problèmes (troubleshooting) rapide et parfaitement adaptée aux milieux industriels lourds.</p>
-            </div>
+            <p>Technicien en informatique rigoureux, orienté vers la résolution de problèmes complexes (troubleshooting) et le service aux utilisateurs. Fort d'une solide expertise en gestion de conseils d'administration et traitement archivistique, je combine de fortes compétences relationnelles à un profil technique polyvalent (réseaux, virtualisation, systèmes). Idéalement établi dans la région, je vise une intégration durable et un engagement à long terme au sein d'un environnement industriel ou d'entreprise à la suite de mon stage de fin d'études.</p>
         </section>
 
         <section id="experience">
@@ -88,8 +85,14 @@
             <h2><i class="fas fa-star"></i> RÉFÉRENCES</h2>
             <blockquote>
                 <p><strong>Objet : Lettre de recommandation pour Matthieu SEERS</strong></p>
-                <p>C’est avec un grand enthousiasme que je rédige cette lettre pour recommander vivement Matthieu Seers pour un poste ou un stage dans le domaine du soutien informatique. [...] Matthieu a pris en charge avec brio la gestion complète de notre infrastructure web. Il a notamment orchestré la configuration technique de notre hébergement et de nos noms de domaine, prouvant sa capacité à naviguer dans des environnements d'administration complexes (comme les plateformes de type Infomaniak).</p>
-                <p>[...] Il a démontré une excellente maîtrise technique en intervenant directement au niveau de nos zones DNS pour configurer des enregistrements de sécurité. [...] Sa capacité à comprendre rapidement de nouvelles interfaces et à appliquer des correctifs précis est un atout inestimable.</p>
+                <p>À qui de droit,</p>
+                <p>C’est avec un grand enthousiasme que je rédige cette lettre pour recommander vivement Matthieu Seers pour un poste ou un stage dans le domaine du soutien informatique et des technologies de l'information. En tant que présidente par intérim de la Société Belge de Bienfaisance (SBB), j'ai le privilège de collaborer avec Matthieu et de constater quotidiennement l'impact majeur de son travail sur la modernisation de notre organisation.</p>
+                <p>Matthieu agit à titre de Responsable de nos technologies de l'information. Dans le cadre de ses fonctions, il a pris en charge avec brio la gestion complète de notre infrastructure web. Il a notamment orchestré la configuration technique de notre hébergement et de nos noms de domaine, prouvant sa capacité à naviguer dans des environnements d'administration complexes (comme les plateformes de type Infomaniak).</p>
+                <p>Parmi ses accomplissements récents, Matthieu a procédé à l'intégration avancée de nos plateformes avec les outils Google (Search Console). Il a démontré une excellente maîtrise technique en intervenant directement au niveau de nos zones DNS pour configurer des enregistrements de sécurité, et a géré l'indexation de nos pages web pour optimiser notre visibilité. De plus, il administre notre site sous WordPress avec une grande rigueur, gérant la refonte visuelle, la restructuration des blocs et l'uniformisation de l'interface utilisateur.</p>
+                <p>Au-delà de ses compétences purement techniques, Matthieu est un collaborateur exceptionnel. Face à un obstacle informatique, il fait preuve d'une persévérance remarquable, d'un grand sens de la débrouillardise et d'une autonomie qui lui permet d'aller au bout de chaque problème pour trouver la solution adéquate. Sa capacité à comprendre rapidement de nouvelles interfaces et à appliquer des correctifs précis est un atout inestimable.</p>
+                <p>Je suis convaincue que la passion de Matthieu pour l'informatique, sa logique de résolution de problèmes et son dévouement feront de lui un technicien en informatique de premier plan au sein de votre entreprise. Je vous le recommande sans la moindre réserve.</p>
+                <p>Je demeure à votre entière disposition pour tout renseignement complémentaire.<br>
+                Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées.</p>
                 <div style="margin-top: 15px; font-style: italic;">
                     <strong>Ada RIVERA TERAN</strong><br>
                     Présidente par intérim - Société Belge de Bienfaisance
@@ -104,6 +107,7 @@
         const body = document.body;
         const icon = btnDarkMode.querySelector('i');
 
+        // Vérifier si un thème est déjà sauvegardé dans le navigateur
         if (localStorage.getItem('theme') === 'dark') {
             body.classList.add('dark-mode');
             icon.classList.replace('fa-moon', 'fa-sun');
