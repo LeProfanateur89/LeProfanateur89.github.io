@@ -11,7 +11,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google tag (gtag.js) -->
+    <style>
+        body {
+            /* Pousse le contenu vers le bas pour ne pas être caché par le menu. 
+               Tu peux ajuster ce 100px selon la taille exacte de ton menu */
+            padding-top: 100px !important; 
+        }
+        html {
+            /* Empêche les titres de se cacher sous le menu lorsqu'on clique sur un lien */
+            scroll-padding-top: 100px !important; 
+        }
+    </style>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QERE2ELFNP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
